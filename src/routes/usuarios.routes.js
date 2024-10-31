@@ -29,4 +29,25 @@ usuariosRoutes.post("/", (req,res) => {
     
 });
 
+usuariosRoutes.get("/:id", (req,res) => {
+    const {id} = req.params;
+   const user = usersRepository.getUserByld(id);
+
+   if (!user) {
+    return res.status(404).json({
+        message: `usuario com id ${id} não encontrado`,
+     });
+   }
+
+   return res.status(200).json({
+    message: `usuario com id ${id}encontrado`,
+     });
+});
+usuariosRoutes.put("/:id", (req,res) => {
+
+})
+usuariosRoutes.delete("/:id", (req,res) => {
+
+})
+
 export default usuariosRoutes;
