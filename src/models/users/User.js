@@ -10,3 +10,5 @@
         return Math.floor(math.random() * 999) +1;
     }
  }
+
+export default User;
