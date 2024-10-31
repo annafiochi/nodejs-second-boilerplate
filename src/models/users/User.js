@@ -5,9 +5,9 @@
         this.email = email
         this.password = password
     }
-
+""
     generalteId() {
-        return Math.floor(math.random() * 999) +1;
+        return Math.floor(Math.random() * 999) +1;
     }
  }
 
